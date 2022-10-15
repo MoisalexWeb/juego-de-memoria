@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Juego de Memoria</title>
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="dark">
+	<!-- Divs for ceate loader -->
+	<div class="lds-spinner loader" id="loader">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	</div>
+	<!-- End divs for ceate loader -->
+	<main>
+		<section class="section-1">
+			<div class="table">
+				<button id="0" onclick="showNumber(0)"></button>
+				<button id="1" onclick="showNumber(1)"></button>
+				<button id="2" onclick="showNumber(2)"></button>
+				<button id="3" onclick="showNumber(3)"></button>
+				<button id="4" onclick="showNumber(4)"></button>
+				<button id="5" onclick="showNumber(5)"></button>
+				<button id="6" onclick="showNumber(6)"></button>
+				<button id="7" onclick="showNumber(7)"></button>
+				<button id="8" onclick="showNumber(8)"></button>
+				<button id="9" onclick="showNumber(9)"></button>
+				<button id="10" onclick="showNumber(10)"></button>
+				<button id="11" onclick="showNumber(11)"></button>
+				<button id="12" onclick="showNumber(12)"></button>
+				<button id="13" onclick="showNumber(13)"></button>
+				<button id="14" onclick="showNumber(14)"></button>
+				<button id="15" onclick="showNumber(15)"></button>
+			</div>
+		</section>
+
+		<section class="section-2">
+			<div>
+				<h2 class="estadistics">Aciertos: <span id="aciertos">0</span></h2>
+			</div>
+			<div>
+				<h2 class="estadistics">Tiempo: <span id="time">30</span> segundos</h2>
+			</div>
+			<div>
+				<h2 class="estadistics">Movimientos: <span id="movements">0</span></h2>
+			</div>
+		</section>
+
+		<section class="replay">
+			<div class="replay__container">
+				<h2 class="win-title">!Felicidades has Ganado!</h2>
+				<p class="win-time">Lo lograste en un tiempo de <span class="replay-time">20 segundos</span></p>
+				<p class="win-movements">Hiciste un total de <span class="replay-movements">12 movimientos</span></p>
+				<button class="replay-btn">Jugar de Nuevo</button>
+				<img src="./close.svg" id="close-win" class="close-modal" alt="Close">
+			</div>
+		</section>
+
+		<section class="lose replay">
+			<div class="lose replay__container">
+				<h2 class="lose-title">!Perdiste! Se acabó el tiempo</h2>
+				<p class="lose-subtitle">Mejor suerte a la próxima</p>
+				<p class="lose-p">Hiciste un total de <span class="movements-span">12 movimientos</span></p>
+				<p class="lose-p">Tuviste <span class="lose-aciertos">0 aciertos</span></p>
+				<button class="replay-btn">Intentar de Nuevo</button>
+				<img src="./close.svg" class="close-modal" id="close-lose" alt="Close">
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<h2>Creado por <a href="https://github.com/MoisalexWeb" rel="noopener">Moises Caraballo</a></h2>
+	</footer>
+
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
